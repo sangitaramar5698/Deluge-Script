@@ -1,0 +1,90 @@
+void RomanToInteger(String Roman)
+{
+	Letters = {"I":1,"V":5,"X":10,"L":50,"C":100,"D":500,"M":1000};
+	str = Collection();
+	Roman = Roman.trim();
+	str = Roman.toList("");
+	// 	info str;
+	first = null;
+	sec = null;
+	total = 0;
+	count = 0;
+	// 	info "Size " + str.size();
+	// 	// 	str = str.trim();
+	// 	for each index i in str
+	// 	{
+	// 		info str.get(i);
+	// 		info i.toNumber();
+	// 	}
+	// 	info "new Size " + str.size();
+	for each index i in str
+	{
+		value = i;
+		if(str.get(i) != "")
+		{
+			if(value + 1 < str.size())
+			{
+				info "If";
+				if(Letters.get(str.get(i + 1)) > Letters.get(str.get(i)))
+				{
+					total = total - Letters.get(str.get(i));
+				}
+				else
+				{
+					info "Else";
+					total = total + Letters.get(str.get(i));
+				}
+			}
+		}
+	}
+	info "final roman value is" + total;
+	// 	for each  i in str
+	// 	{
+	// 		count = count + 1;
+	// 		if(Letters.containKey(i))
+	// 		{
+	// 			// 			info Letters.get(i);
+	// 			if(first == null)
+	// 			{
+	// 				first = Letters.get(i);
+	// 				info "Size" + str.size();
+	// 				if(str.size() < 3)
+	// 				{
+	// 					info "Check";
+	// 					total = total + first.toNumber();
+	// 					// 					return total;
+	// 				}
+	// 				if(count == str.size())
+	// 				{
+	// 					info "Checkkc";
+	// 					total = total + first.toNumber();
+	// 				}
+	// 				// 				info "first"+first;
+	// 			}
+	// 			else if(first != null && str.size() > 2)
+	// 			{
+	// 				sec = Letters.get(i);
+	// 				info "sec" + sec;
+	// 				if(first.toNumber() < sec.toNumber())
+	// 				{
+	// 					info "Check";
+	// 					total = total + sec.toNumber() - first.toNumber();
+	// 					first = null;
+	// 					sec = null;
+	// 				}
+	// 				else if(first.toNumber() == sec.toNumber())
+	// 				{
+	// 					total = sec.toNumber() + first.toNumber();
+	// 					first = null;
+	// 					sec = null;
+	// 				}
+	// 				else
+	// 				{
+	// 					total = total + first.toNumber();
+	// 					first = sec;
+	// 					sec = null;
+	// 				}
+	// 			}
+	// 		}
+	// 	}
+}
